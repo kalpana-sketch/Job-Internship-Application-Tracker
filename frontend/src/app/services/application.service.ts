@@ -6,7 +6,7 @@ import { Application } from '../models/application.model';
 @Injectable({ providedIn: 'root' })
 export class ApplicationService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:5000/api/applications';
+private apiUrl = 'https://job-internship-application-tracker.onrender.com/api/applications';
 
   getAll(): Observable<Application[]> {
     return this.http.get<Application[]>(this.apiUrl);
